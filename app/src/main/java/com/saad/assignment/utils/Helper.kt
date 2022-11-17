@@ -1,10 +1,20 @@
 package com.saad.assignment.utils
 
-class Helper {
+import android.content.Context
+import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.saad.assignment.R
 
-    companion object {
+object Helper {
 
-
+    fun loadImage(ctx: Context,image: String,view: ImageView){
+        Glide.with(ctx)
+            .load(Constants.IMAGE_BASE_URL+image)
+            .transition(DrawableTransitionOptions.withCrossFade())
+            .placeholder(R.drawable.img_placeholder)
+            .error(R.drawable.img_placeholder)
+            .into(view)
     }
 
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_bg"
     tools:context=".ui_views.fragments.AllMovies">
 
     <androidx.appcompat.widget.SearchView
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
         android:layout_margin="@dimen/_15sdp"
-        android:background="@drawable/grey_round_bg"
+        android:background="@drawable/primary_yellow_round_corners_bg"
         app:iconifiedByDefault="false"
         app:queryHint="@string/search_movie"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
         android:importantForAccessibility="no"
-        app:backgroundTint="@color/primary_grey"
+        app:backgroundTint="@color/primary_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_favorite_star"/>
