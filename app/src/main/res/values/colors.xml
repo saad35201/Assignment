@@ -9,10 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
     //app colors
-    <color name="app_bg">#202020</color>
+    <color name="app_bg">#283143</color>
     <color name="primary_grey">#E3E3E3</color>
     <color name="primary_red">#ED2626</color>
-    <color name="primary_yellow">#FFC107</color>
-    <color name="secondary_yellow">#CCFFC107</color>
+    <color name="primary_teal">#018786</color>
+    <color name="secondary_teal">#CC018786</color>
 
 </resources>

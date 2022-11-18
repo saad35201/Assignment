@@ -1,6 +1,10 @@
 package com.saad.assignment.model.models
 
+import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class MoviesResponse(
 
@@ -17,6 +21,8 @@ data class MoviesResponse(
 	val totalResults: Int? = null
 )
 
+@Parcelize
+@Entity(tableName = "movie")
 data class ResultsItem(
 
 	@field:SerializedName("overview")
@@ -52,6 +58,7 @@ data class ResultsItem(
 	@field:SerializedName("vote_average")
 	val voteAverage: Double? = null,
 
+	@PrimaryKey
 	@field:SerializedName("id")
 	val id: Int? = null,
 
@@ -60,4 +67,4 @@ data class ResultsItem(
 
 	@field:SerializedName("vote_count")
 	val voteCount: Int? = null
-)
+) : Parcelable

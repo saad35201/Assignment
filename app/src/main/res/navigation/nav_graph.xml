@@ -9,5 +9,26 @@
         android:id="@+id/allMovies"
         android:name="com.saad.assignment.ui_views.fragments.AllMovies"
         android:label="fragment_all_movies"
-        tools:layout="@layout/fragment_all_movies" />
+        tools:layout="@layout/fragment_all_movies" >
+        <action
+            android:id="@+id/action_allMovies_to_movieDetail"
+            app:destination="@id/movieDetail" />
+        <action
+            android:id="@+id/action_allMovies_to_favoriteMovies"
+            app:destination="@id/favoriteMovies" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetail"
+        android:name="com.saad.assignment.ui_views.fragments.MovieDetail"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" />
+    <fragment
+        android:id="@+id/favoriteMovies"
+        android:name="com.saad.assignment.ui_views.fragments.FavoriteMovies"
+        android:label="fragment_favorite_movies"
+        tools:layout="@layout/fragment_favorite_movies" >
+        <action
+            android:id="@+id/action_favoriteMovies_to_movieDetail"
+            app:destination="@id/movieDetail" />
+    </fragment>
 </navigation>
