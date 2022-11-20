@@ -10,7 +10,10 @@ interface MovieDao {
     @Query("SELECT * FROM movie ORDER BY id DESC")
     fun getMovies() : LiveData<List<ResultsItem>>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAllMovies(list: List<ResultsItem>)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addMovie(movie : ResultsItem)
 
     @Delete

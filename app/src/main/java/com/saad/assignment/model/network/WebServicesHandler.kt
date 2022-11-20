@@ -1,4 +1,4 @@
-package com.saad.assignment.model.retrofit
+package com.saad.assignment.model.network
 
 import com.saad.assignment.utils.Constants
 import okhttp3.OkHttpClient
@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 
-object RetrofitClient {
+object WebServicesHandler {
 
     fun getInstance(): Retrofit {
         val mHttpLoggingInterceptor = HttpLoggingInterceptor()

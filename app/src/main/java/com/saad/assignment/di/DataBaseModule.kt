@@ -1,8 +1,8 @@
 package com.saad.assignment.di
 
 import android.content.Context
-import com.saad.assignment.model.retrofit.MovieAPIService
-import com.saad.assignment.model.retrofit.RetrofitClient
+import com.saad.assignment.model.network.WebServices
+import com.saad.assignment.model.network.WebServicesHandler
 import com.saad.assignment.model.roomdb.MovieDao
 import com.saad.assignment.model.roomdb.RoomDB
 import dagger.Module
@@ -22,13 +22,13 @@ object DataBaseModule {
     @Singleton
     @Provides
     fun provideRetrofitClient(): Retrofit{
-        return RetrofitClient.getInstance()
+        return WebServicesHandler.getInstance()
     }
 
     @Singleton
     @Provides
-    fun provideMoviesAPI(): MovieAPIService{
-        return provideRetrofitClient().create(MovieAPIService::class.java)
+    fun provideMoviesAPI(): WebServices{
+        return provideRetrofitClient().create(WebServices::class.java)
     }
 
     /*------------------------------------Local Database------------------------------------*/

@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.saad.assignment.model.models.ResultsItem
 import com.saad.assignment.utils.Constants
 
-@Database(entities = [ResultsItem::class], version = 1, exportSchema = false)
+@Database(entities = [ResultsItem::class], version = 2, exportSchema = false)
 abstract class RoomDB : RoomDatabase() {
 
     abstract fun movieDao(): MovieDao
@@ -22,7 +22,7 @@ abstract class RoomDB : RoomDatabase() {
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
                         RoomDB::class.java,
-                        Constants.DATABASE_NAME
+                        Constants.DATABASE_NAME,
                     ).build()
             }
             return INSTANCE!!
